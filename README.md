@@ -1,3 +1,3 @@
-# Repozytorium z rozwiązaniami zadań.'
+# Repozytorium z rozwiązaniami zadań.
 
 # Autor: Kewin Biegański
