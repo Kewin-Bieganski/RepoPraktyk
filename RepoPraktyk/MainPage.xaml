@@ -9,6 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="160"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Start!" Grid.Row="2" HorizontalAlignment="Center" Click="b_Start_Click" Height="33" Width="54"/>
+        <ParallaxView Grid.Column="2" Margin="915,0,-855,0"/>
     </Grid>
 </Page>
