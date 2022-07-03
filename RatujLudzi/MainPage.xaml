@@ -10,11 +10,21 @@
     <Page.Resources>
         <ControlTemplate x:Key="EnemyTemplate" TargetType="ContentControl">
             <Grid>
-                <Ellipse Height="100" Stroke="Black" Width="100" Fill="#FFFB00FF"/>
+                <Ellipse Height="100" Stroke="Black" Width="75" Fill="Gray"/>
+                <Ellipse HorizontalAlignment="Center" Height="35" Stroke="Black" VerticalAlignment="Top" Width="25" Margin="40,20,70,0" Fill="Black" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <Ellipse.RenderTransform>
+                        <CompositeTransform SkewX="10"/>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse HorizontalAlignment="Center" Height="35" Stroke="Black" VerticalAlignment="Top" Width="25" Margin="70,20,40,3" Fill="Black" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <Ellipse.RenderTransform>
+                        <CompositeTransform SkewX="-10"/>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
             </Grid>
         </ControlTemplate>
     </Page.Resources>
-    <Grid>
+    <Grid x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition/>
@@ -32,7 +42,7 @@
             <TextBlock TextWrapping="Wrap" Text="Ich unikaj" TextAlignment="Center" FontSize="14" Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <ContentControl Template="{StaticResource EnemyTemplate}" Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
-        <Canvas x:Name="playArea" Grid.Row="1" Width="Auto" Grid.ColumnSpan="3">
+        <Canvas x:Name="playArea" Grid.Row="1" Width="Auto" Grid.ColumnSpan="3" PointerMoved="playArea_PointerMoved" PointerExited="playArea_PointerExited">
             <Canvas.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF56C35D"/>
@@ -40,12 +50,12 @@
                     <GradientStop Color="#FF00CAED" Offset="0.52"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <StackPanel x:Name="human" Orientation="Vertical">
+            <StackPanel x:Name="human" Orientation="Vertical" PointerPressed="human_PointerPressed">
                 <Ellipse Height="10" Stroke="Red" Width="10" Fill="White"/>
                 <Rectangle Height="25" Stroke="#FFFF0900" Width="10" Fill="White"/>
             </StackPanel>
             <TextBlock x:Name="gameOverText" TextWrapping="Wrap" Text="Koniec gry." FontSize="100" FontFamily="Consolas" FontStyle="Italic" FontWeight="Bold" Canvas.Left="448" Canvas.Top="233" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Rectangle x:Name="target" Height="50" Stroke="Black" Width="50" Canvas.Left="953" Canvas.Top="187" RenderTransformOrigin="0.5,0.5">
+            <Rectangle x:Name="target" Height="50" Stroke="Black" Width="50" Canvas.Left="953" Canvas.Top="187" RenderTransformOrigin="0.5,0.5" PointerEntered="target_PointerEntered">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="White"/>
