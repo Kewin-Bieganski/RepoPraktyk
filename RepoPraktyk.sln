@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensownyProjekt", "Sensowny
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ifelseFun", "ifelseFun\ifelseFun.csproj", "{2383B4CD-8923-4799-9A00-56BFD429DC5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win - dows forms", "Win - dows forms\Win - dows forms.csproj", "{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -145,6 +147,26 @@ Global
 		{2383B4CD-8923-4799-9A00-56BFD429DC5B}.Release|x86.ActiveCfg = Release|x86
 		{2383B4CD-8923-4799-9A00-56BFD429DC5B}.Release|x86.Build.0 = Release|x86
 		{2383B4CD-8923-4799-9A00-56BFD429DC5B}.Release|x86.Deploy.0 = Release|x86
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|x64.Build.0 = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Debug|x86.Build.0 = Debug|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|ARM.Build.0 = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|ARM64.Build.0 = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|x64.ActiveCfg = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|x64.Build.0 = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|x86.ActiveCfg = Release|Any CPU
+		{7F35832D-7FDF-48DD-9A47-4F43BADA29DB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
