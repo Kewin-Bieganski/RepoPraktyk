@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "valueCasting", "valueCastin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kalkulatorOdleglosci", "kalkulatorOdleglosci\kalkulatorOdleglosci.csproj", "{F0BC111B-2EEA-4975-AB81-92F8C301C7C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elephantReference", "elephantReference\elephantReference.csproj", "{66F7AFB7-858A-4B32-82B5-127149F6E1C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -299,6 +301,26 @@ Global
 		{F0BC111B-2EEA-4975-AB81-92F8C301C7C6}.Release|x64.Build.0 = Release|Any CPU
 		{F0BC111B-2EEA-4975-AB81-92F8C301C7C6}.Release|x86.ActiveCfg = Release|Any CPU
 		{F0BC111B-2EEA-4975-AB81-92F8C301C7C6}.Release|x86.Build.0 = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|ARM.Build.0 = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|x64.Build.0 = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Debug|x86.Build.0 = Debug|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|ARM.ActiveCfg = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|ARM.Build.0 = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|ARM64.Build.0 = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|x64.ActiveCfg = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|x64.Build.0 = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|x86.ActiveCfg = Release|Any CPU
+		{66F7AFB7-858A-4B32-82B5-127149F6E1C5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
