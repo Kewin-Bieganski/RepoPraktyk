@@ -12,7 +12,7 @@
 
         public bool Run()
         {
-            jumpSize = random.Next(0, 40);
+            jumpSize = random.Next(0, 20);
             if (myPictureBox != null)
             {
                 if (myPictureBox.Left + jumpSize > myPictureBox.Parent.Width - myPictureBox.Width)

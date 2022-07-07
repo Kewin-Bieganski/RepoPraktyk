@@ -307,6 +307,7 @@
             // 
             // t_grayhoundRace
             // 
+            this.t_grayhoundRace.Interval = 10;
             this.t_grayhoundRace.Tick += new System.EventHandler(this.t_grayhoundRace_Tick);
             // 
             // p_racetrack
