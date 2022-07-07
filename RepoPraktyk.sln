@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graWLiterki", "graWLiterki\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "labelLeftRightBounce", "labelLeftRightBounce\labelLeftRightBounce.csproj", "{7070888A-5DB5-40EB-A549-E6DEA604EC45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grayhoundRaceSimulator", "grayhoundRaceSimulator\grayhoundRaceSimulator.csproj", "{DCA925D0-E6EA-4A6E-9DB6-833FF48BE0B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "grayhoundRaceSimulator", "grayhoundRaceSimulator\grayhoundRaceSimulator.csproj", "{DCA925D0-E6EA-4A6E-9DB6-833FF48BE0B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "partyPlanner", "partyPlanner\partyPlanner.csproj", "{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -409,6 +411,26 @@ Global
 		{DCA925D0-E6EA-4A6E-9DB6-833FF48BE0B4}.Release|x64.Build.0 = Release|Any CPU
 		{DCA925D0-E6EA-4A6E-9DB6-833FF48BE0B4}.Release|x86.ActiveCfg = Release|Any CPU
 		{DCA925D0-E6EA-4A6E-9DB6-833FF48BE0B4}.Release|x86.Build.0 = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|x64.Build.0 = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Debug|x86.Build.0 = Debug|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|ARM.Build.0 = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|ARM64.Build.0 = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|x64.ActiveCfg = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|x64.Build.0 = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|x86.ActiveCfg = Release|Any CPU
+		{D70224D5-4B1D-4B0B-8D4A-6433C606E13B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
