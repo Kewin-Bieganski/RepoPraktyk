@@ -11,7 +11,18 @@ namespace partyPlanner
         public const decimal costOfFoodPerPerson = 25;
         public decimal costOfBeveragesPerPerson;
         public decimal costOfDecorations;
-        public int numerOfPeople = 0;
+        private int numerOfPeople = 0;
+
+        public int GetNumberOfPeople()
+        {
+            return numerOfPeople;
+        }
+
+        public void SetPartyOptions(int people, bool fancy)
+        {
+            numerOfPeople = people;
+            CalculateCostOfDecorations(fancy);
+        }
 
         public void SetHealthyOption(bool healthyOption)
         {

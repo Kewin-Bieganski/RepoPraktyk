@@ -8,11 +8,7 @@ namespace partyPlanner
         {
             InitializeComponent();
 
-            dinnerParty = new DinnerParty()
-            {
-                numerOfPeople = 5,
-            };
-
+            dinnerParty = new DinnerParty();
             dinnerParty.SetHealthyOption(false);
             dinnerParty.CalculateCostOfDecorations(true);
             DisplayDinnerPartyCost();
@@ -27,8 +23,7 @@ namespace partyPlanner
 
         private void nUD_numberOfPeople_ValueChanged(object sender, EventArgs e)
         {
-            dinnerParty.numerOfPeople = (int)nUD_numberOfPeople.Value;
-            DisplayDinnerPartyCost();
+            dinnerParty.SetPartyOptions((int)nUD_numberOfPeople.Value, cB_fancyDecorations.Checked);
         }
 
         private void cB_fancyDecorations_CheckedChanged(object sender, EventArgs e)
