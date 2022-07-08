@@ -74,8 +74,6 @@
             // cB_fancyDecorations
             // 
             this.cB_fancyDecorations.AutoSize = true;
-            this.cB_fancyDecorations.Checked = true;
-            this.cB_fancyDecorations.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cB_fancyDecorations.Location = new System.Drawing.Point(19, 106);
             this.cB_fancyDecorations.Margin = new System.Windows.Forms.Padding(10);
             this.cB_fancyDecorations.Name = "cB_fancyDecorations";

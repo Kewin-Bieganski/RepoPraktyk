@@ -7,34 +7,32 @@ namespace partyPlanner
         public Form1()
         {
             InitializeComponent();
-
-            dinnerParty = new DinnerParty();
-            dinnerParty.SetHealthyOption(false);
-            dinnerParty.CalculateCostOfDecorations(true);
+            dinnerParty = new DinnerParty((int)nUD_numberOfPeople.Value, cB_healthyOption.Checked, cB_fancyDecorations.Checked);
             DisplayDinnerPartyCost();
         }
 
         private void DisplayDinnerPartyCost()
         {
-            decimal cost = dinnerParty.CalculateCost(cB_healthyOption.Checked);
-            l_cost.Text = cost.ToString("c");
+            decimal Cost = dinnerParty.Cost;
+            l_cost.Text = Cost.ToString("C");
         }
 
 
         private void nUD_numberOfPeople_ValueChanged(object sender, EventArgs e)
         {
-            dinnerParty.SetPartyOptions((int)nUD_numberOfPeople.Value, cB_fancyDecorations.Checked);
+            dinnerParty.NumberOfPeople = (int)nUD_numberOfPeople.Value;
+            DisplayDinnerPartyCost();
         }
 
         private void cB_fancyDecorations_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.CalculateCostOfDecorations(cB_fancyDecorations.Checked);
+            dinnerParty.FancyDecorations = cB_fancyDecorations.Checked;
             DisplayDinnerPartyCost();
         }
 
         private void cB_healthyOption_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.SetHealthyOption(cB_healthyOption.Checked);
+            dinnerParty.HealthyOption = cB_healthyOption.Checked;
             DisplayDinnerPartyCost();
         }
     }
