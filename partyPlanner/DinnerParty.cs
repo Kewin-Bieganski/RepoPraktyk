@@ -1,49 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace partyPlanner
+﻿namespace partyPlanner
 {
     internal class DinnerParty
     {
-        public const decimal costOfFoodPerPerson = 25;
-        public decimal costOfBeveragesPerPerson;
-        public decimal costOfDecorations;
-        private int numerOfPeople = 0;
-
-        public int GetNumberOfPeople()
+        public const int CostOfFoodPerPerson = 25;
+        public int NumberOfPeople { get; set; }
+        public bool FancyDecorations { get; set; }
+        public bool HealthyOption { get; set; }
+        public decimal Cost
         {
-            return numerOfPeople;
-        }
-
-        public void SetPartyOptions(int people, bool fancy)
-        {
-            numerOfPeople = people;
-            CalculateCostOfDecorations(fancy);
-        }
-
-        public void SetHealthyOption(bool healthyOption)
-        {
-           costOfBeveragesPerPerson = (healthyOption ? 5.00M : 20.00M);
-        }
-
-        public void CalculateCostOfDecorations(bool fancy)
-        {
-            costOfDecorations = (fancy ? (numerOfPeople * 15.00M) + 50M : (numerOfPeople * 7.50M) + 30M);
-        }
-
-        public decimal CalculateCost(bool healthyOption)
-        {
-            decimal totalCost = costOfDecorations + ((costOfBeveragesPerPerson + costOfFoodPerPerson) * numerOfPeople);
-            if(healthyOption)
+            get
             {
-                return totalCost * .95M;
+                decimal totalCost = CalculateCostOfDecorations();
+                totalCost += ((CalculateCostOfBeveragesPerPerson() + CostOfFoodPerPerson) * NumberOfPeople);
+                if(HealthyOption)
+                {
+                    totalCost *= .95M;
+                }
+                return totalCost;
             }
-            return totalCost;
         }
 
+        public DinnerParty(int numberOfPeople, bool fancyDecorations, bool healthyOption)
+        {
+            NumberOfPeople = numberOfPeople;
+            FancyDecorations = fancyDecorations;
+            HealthyOption = healthyOption;
+        }
 
+        private decimal CalculateCostOfBeveragesPerPerson()
+        {
+            decimal costOfBeveragesPerPerson;
+            if(HealthyOption)
+            {
+                costOfBeveragesPerPerson = 5.00M;
+            } else
+            {
+                costOfBeveragesPerPerson = 20.00M;
+            }
+            return costOfBeveragesPerPerson;
+        }
+
+        private decimal CalculateCostOfDecorations()
+        {
+            decimal costOfDecorations;
+            if(FancyDecorations)
+            {
+                costOfDecorations = (NumberOfPeople * 15.00M) + 50M;
+            } else
+            {
+                costOfDecorations = (NumberOfPeople * 7.50M) + 30M;
+            }
+            return costOfDecorations;
+        }
     }
 }
