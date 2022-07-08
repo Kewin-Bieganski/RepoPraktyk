@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "partyPlanner2": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\"
+    }
+  }
+}
