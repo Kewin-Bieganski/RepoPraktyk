@@ -1,11 +1,11 @@
 using System.Speech.Synthesis;
+using System.Text.RegularExpressions;
 
 namespace textToSpeech
 {
     public partial class Form1 : Form
     {
         SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
-        List<Prompt> prompts = new List<Prompt>();
 
         public Form1()
         {
@@ -17,17 +17,13 @@ namespace textToSpeech
         {
             if(speechSynthesizer.State.Equals(SynthesizerState.Ready))
             {
-                prompts.Add(speechSynthesizer.SpeakAsync(rTB_text.Text));
+                speechSynthesizer.SpeakAsync(new Regex("\n").Replace(rTB_text.Text, " "));
             }
         }
 
         private void b_stop_Click(object sender, EventArgs e)
         {
-            foreach (var prompt in prompts)
-            {
-                speechSynthesizer.SpeakAsyncCancel(prompt);
-            }
-            prompts.Clear();
+            speechSynthesizer.SpeakAsyncCancelAll();
         }
 
         private void b_clear_Click(object sender, EventArgs e)
