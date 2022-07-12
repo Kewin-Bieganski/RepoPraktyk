@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "partyPlanner2", "partyPlann
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "baseClass", "baseClass\baseClass.csproj", "{BA114379-4F6A-4A38-9408-A5257F0B997C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zbudujemyDom", "zbudujemyDom\zbudujemyDom.csproj", "{8C263391-BF64-450C-B4E1-1B42B6C2BE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zbudujemyDom", "zbudujemyDom\zbudujemyDom.csproj", "{8C263391-BF64-450C-B4E1-1B42B6C2BE55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hideAndSeek", "hideAndSeek\hideAndSeek.csproj", "{7DF1674A-474A-477F-8574-C2AC5544299B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -519,6 +521,26 @@ Global
 		{8C263391-BF64-450C-B4E1-1B42B6C2BE55}.Release|x64.Build.0 = Release|Any CPU
 		{8C263391-BF64-450C-B4E1-1B42B6C2BE55}.Release|x86.ActiveCfg = Release|Any CPU
 		{8C263391-BF64-450C-B4E1-1B42B6C2BE55}.Release|x86.Build.0 = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|x64.Build.0 = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Debug|x86.Build.0 = Debug|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|ARM.Build.0 = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|ARM64.Build.0 = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|x64.ActiveCfg = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|x64.Build.0 = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|x86.ActiveCfg = Release|Any CPU
+		{7DF1674A-474A-477F-8574-C2AC5544299B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
