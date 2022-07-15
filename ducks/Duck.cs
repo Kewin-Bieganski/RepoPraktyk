@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ducks
 {
-    internal class Duck : IComparable<Duck>
+    internal class Duck : Bird, IComparable<Duck>
     {
         public int Size;
         public KindOfDuck Kind;

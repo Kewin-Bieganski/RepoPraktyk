@@ -16,6 +16,19 @@
                 new Duck() { Kind = KindOfDuck.Mallard, Size = 14},
                 new Duck() { Kind = KindOfDuck.Decoy, Size = 13},
             };
+            
+            
+            IEnumerable<Bird> upcastDucks = ducks;
+            List<Bird> birds = new List<Bird>();
+            birds.Add(new Bird() { Name = "Feathers" });
+            birds.AddRange(upcastDucks);
+            birds.Add(new Bird() { Name = "George" });
+            foreach(var bird in birds)
+            {
+                Console.WriteLine(bird);
+            }
+            Console.WriteLine();
+            
             PrintDucks(ducks);
             //ducks.Sort();
             //ducks.Sort(duckComparerBySize);
@@ -26,17 +39,24 @@
             ducks.Sort(duckComparer);
             PrintDucks(ducks);
             Console.WriteLine();
-
             Console.ReadKey();
         }
 
         public static void PrintDucks(List<Duck> ducks)
         {
             Console.WriteLine("\tLista kaczek:");
-            foreach (var duck in ducks)
+            /*            foreach (var duck in ducks)
+                        {
+                            Console.WriteLine($"* {duck}");
+                        }*/
+            IEnumerator<Duck> enumerator = ducks.GetEnumerator();
+            while(enumerator.MoveNext())
             {
-                Console.WriteLine($"* {duck}");
+                Duck duck = enumerator.Current;
+                Console.WriteLine(duck);
             }
+            IDisposable disposable = enumerator as IDisposable;
+            if(disposable != null) disposable.Dispose();
             Console.WriteLine();
         }
     }
