@@ -34,7 +34,7 @@
             // 
             // b_random
             // 
-            this.b_random.Location = new System.Drawing.Point(12, 32);
+            this.b_random.Location = new System.Drawing.Point(129, 373);
             this.b_random.Name = "b_random";
             this.b_random.Size = new System.Drawing.Size(94, 29);
             this.b_random.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(235, 414);
             this.Controls.Add(this.l_output);
             this.Controls.Add(this.b_random);
             this.MaximizeBox = false;
