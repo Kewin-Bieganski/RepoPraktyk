@@ -27,5 +27,17 @@ namespace cards
         {
             return Name;
         }
+
+        public static bool DoesCardMatch(Card CardToCheck, Suits Suit)
+        {
+            if(CardToCheck.Suit == Suit) return true;
+            return false;
+        }
+
+        public static bool DoesCardMatch(Card CardToCheck, Values Value)
+        {
+            if (CardToCheck.Value == Value) return true;
+            return false;
+        }
     }
 }
