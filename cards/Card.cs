@@ -22,5 +22,22 @@ namespace cards
             this.Suit = suit;
             this.Value = value;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        public static bool DoesCardMatch(Card CardToCheck, Suits Suit)
+        {
+            if(CardToCheck.Suit == Suit) return true;
+            return false;
+        }
+
+        public static bool DoesCardMatch(Card CardToCheck, Values Value)
+        {
+            if (CardToCheck.Value == Value) return true;
+            return false;
+        }
     }
 }
