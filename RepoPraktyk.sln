@@ -59,7 +59,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "baseballTshirt", "baseballT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "secretPlan", "secretPlan\secretPlan.csproj", "{0FF645D6-5DA8-4A1F-89D2-A7E9F4A43123}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dialogs", "dialogs\dialogs.csproj", "{7845F763-9FFC-4B59-A03B-20224EE1FF69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dialogs", "dialogs\dialogs.csproj", "{7845F763-9FFC-4B59-A03B-20224EE1FF69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dialogs2", "dialogs2\dialogs2.csproj", "{5CF9A951-286C-4BAB-887A-5791726460E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -695,6 +697,26 @@ Global
 		{7845F763-9FFC-4B59-A03B-20224EE1FF69}.Release|x64.Build.0 = Release|Any CPU
 		{7845F763-9FFC-4B59-A03B-20224EE1FF69}.Release|x86.ActiveCfg = Release|Any CPU
 		{7845F763-9FFC-4B59-A03B-20224EE1FF69}.Release|x86.Build.0 = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|ARM.Build.0 = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|x64.Build.0 = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Debug|x86.Build.0 = Debug|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|ARM.Build.0 = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|ARM64.Build.0 = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|x64.ActiveCfg = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|x64.Build.0 = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|x86.ActiveCfg = Release|Any CPU
+		{5CF9A951-286C-4BAB-887A-5791726460E5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
