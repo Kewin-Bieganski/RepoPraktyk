@@ -21,9 +21,9 @@ namespace dialogs2
             }
         }
 
-        private void b_safe_Click(object sender, EventArgs e)
+        private void b_save_Click(object sender, EventArgs e)
         {
-            if(sFD_save.ShowDialog() == DialogResult.OK)
+            if (sFD_save.ShowDialog() == DialogResult.OK)
             {
                 name = sFD_save.FileName;
                 File.WriteAllText(name, tB_io.Text);

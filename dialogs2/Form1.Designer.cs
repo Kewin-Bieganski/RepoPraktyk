@@ -32,7 +32,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tB_io = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.b_safe = new System.Windows.Forms.Button();
+            this.b_save = new System.Windows.Forms.Button();
             this.b_open = new System.Windows.Forms.Button();
             this.sFD_save = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.b_safe);
+            this.flowLayoutPanel1.Controls.Add(this.b_save);
             this.flowLayoutPanel1.Controls.Add(this.b_open);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
@@ -81,16 +81,16 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(891, 53);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // b_safe
+            // b_save
             // 
-            this.b_safe.Location = new System.Drawing.Point(787, 10);
-            this.b_safe.Margin = new System.Windows.Forms.Padding(10);
-            this.b_safe.Name = "b_safe";
-            this.b_safe.Size = new System.Drawing.Size(94, 29);
-            this.b_safe.TabIndex = 0;
-            this.b_safe.Text = "Zapisz";
-            this.b_safe.UseVisualStyleBackColor = true;
-            this.b_safe.Click += new System.EventHandler(this.b_safe_Click);
+            this.b_save.Location = new System.Drawing.Point(787, 10);
+            this.b_save.Margin = new System.Windows.Forms.Padding(10);
+            this.b_save.Name = "b_save";
+            this.b_save.Size = new System.Drawing.Size(94, 29);
+            this.b_save.TabIndex = 0;
+            this.b_save.Text = "Zapisz";
+            this.b_save.UseVisualStyleBackColor = true;
+            this.b_save.Click += new System.EventHandler(this.b_save_Click);
             // 
             // b_open
             // 
@@ -124,7 +124,7 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TextBox tB_io;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button b_safe;
+        private Button b_save;
         private Button b_open;
         private SaveFileDialog sFD_save;
     }
