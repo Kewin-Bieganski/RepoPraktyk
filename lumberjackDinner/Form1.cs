@@ -35,30 +35,33 @@ namespace lumberjackDinner
 
         private void b_nextLumberjack_Click(object sender, EventArgs e)
         {
-
+            if (breakfastLine.Count == 0) return;
+            Lumberjack nextLumberjack = breakfastLine.Dequeue();
+            nextLumberjack.EatFlapjacks();
+            l_status.Text = "";
+            RedrawList();
         }
-
-        
 
         private void RedrawList()
         {
             int number = 1;
-            line.Items.Clear();
+            lB_queue.Items.Clear();
             foreach (Lumberjack lumberjack in breakfastLine)
             {
-                line.Items.Add(number + ". " + lumberjack.Name);
+                lB_queue.Items.Add(number + ". " + lumberjack.Name);
                 number++;
             }
             if (breakfastLine.Count == 0)
             {
                 groupBox1.Enabled = false;
-                nextInLine.Text = "";
+                l_status.Text = "";
             }
             else
             {
                 groupBox1.Enabled = true;
                 Lumberjack currentLumberjack = breakfastLine.Peek();
- }
+                l_status.Text = currentLumberjack.Name + " ma " + currentLumberjack.FlapjackCount + " naleœników";
+            }
         }
         private void nextLumberjack_Click(object sender, EventArgs e)
         {
@@ -67,28 +70,6 @@ namespace lumberjackDinner
             nextLumberjack.EatFlapjacks();
             l_status.Text = "";
             RedrawList();
-        }
-        class Lumberjack
-        {
-            private string name;
-            public string Name { get { return name; } }
-            private Stack<Flapjack> meal;
-            public Lumberjack(string name)
-            {
-                this.name = name;
-                meal = new Stack<Flapjack>();
-            }
-            public int FlapjackCount { get { return meal.Count; } }
-            public void TakeFlapjacks(Flapjack food, int HowMany)
-            {
-                for (int i = 0; i < HowMany; i++)
-                {
-                    meal.Push(food);
-                }
-            }
-            public void EatFlapjacks()
-            {
-            }
         }
     }
 }
