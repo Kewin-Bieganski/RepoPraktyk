@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace cards
 {
+    [Serializable]
     internal class Card
     {
         public Suits Suit { get; set; }
