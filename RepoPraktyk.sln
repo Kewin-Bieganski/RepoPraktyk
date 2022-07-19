@@ -73,6 +73,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eureka", "eureka\eureka.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binaryWriter", "binaryWriter\binaryWriter.csproj", "{13CA5A1B-B369-4E30-AA00-1D90E93D4273}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "readByHand", "readByHand\readByHand.csproj", "{3DFE678C-E06E-4B2E-85CE-025C9347FA37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -827,6 +829,26 @@ Global
 		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|x64.Build.0 = Release|Any CPU
 		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|x86.ActiveCfg = Release|Any CPU
 		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|x86.Build.0 = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|ARM.Build.0 = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|x64.Build.0 = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Debug|x86.Build.0 = Debug|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|ARM.Build.0 = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|ARM64.Build.0 = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|x64.ActiveCfg = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|x64.Build.0 = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|x86.ActiveCfg = Release|Any CPU
+		{3DFE678C-E06E-4B2E-85CE-025C9347FA37}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
