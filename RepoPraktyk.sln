@@ -69,7 +69,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dialogs2", "dialogs2\dialog
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "excuses", "excuses\excuses.csproj", "{B7D77ACF-6FBB-4A42-A68F-330205558066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eureka", "eureka\eureka.csproj", "{FE731FAF-4167-4C1B-8AD6-969BEAC84E42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eureka", "eureka\eureka.csproj", "{FE731FAF-4167-4C1B-8AD6-969BEAC84E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binaryWriter", "binaryWriter\binaryWriter.csproj", "{13CA5A1B-B369-4E30-AA00-1D90E93D4273}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -805,6 +807,26 @@ Global
 		{FE731FAF-4167-4C1B-8AD6-969BEAC84E42}.Release|x64.Build.0 = Release|Any CPU
 		{FE731FAF-4167-4C1B-8AD6-969BEAC84E42}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE731FAF-4167-4C1B-8AD6-969BEAC84E42}.Release|x86.Build.0 = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|ARM.Build.0 = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|x64.Build.0 = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Debug|x86.Build.0 = Debug|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|ARM.ActiveCfg = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|ARM.Build.0 = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|ARM64.Build.0 = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|x64.ActiveCfg = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|x64.Build.0 = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|x86.ActiveCfg = Release|Any CPU
+		{13CA5A1B-B369-4E30-AA00-1D90E93D4273}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
