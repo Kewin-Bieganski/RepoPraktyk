@@ -62,8 +62,8 @@ namespace excuses
                 return;
             }
             sFD_save.InitialDirectory = selectedFolder;
-            sFD_save.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
-            sFD_save.FileName = tB_excuse.Text + ".txt";
+            sFD_save.Filter = "Pliki wymówek (*.excuse)|*.excuse|Wszystkie pliki (*.*)|*.*";
+            sFD_save.FileName = tB_excuse.Text + ".excuse";
             DialogResult result = sFD_save.ShowDialog();
             if(result == DialogResult.OK)
             {
@@ -78,8 +78,8 @@ namespace excuses
             if(CheckChanged())
             {
                 oFD_open.InitialDirectory = selectedFolder;
-                oFD_open.Filter = "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
-                oFD_open.FileName = tB_excuse.Text + ".txt";
+                oFD_open.Filter = "Pliki tekstowe (*.excuse)|*.excuse|Wszystkie pliki (*.*)|*.*";
+                oFD_open.FileName = tB_excuse.Text + ".excuse";
             }
             DialogResult result = oFD_open.ShowDialog();
             if (result == DialogResult.OK)
