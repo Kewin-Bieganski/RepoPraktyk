@@ -79,7 +79,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hexdumper", "hexdumper\hexd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "theBindingOfMemes", "theBindingOfMemes\theBindingOfMemes.csproj", "{CC82B9F4-3300-42DD-AEA4-F031D4623D75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kosmita", "..\Kosmita\Kosmita\Kosmita.csproj", "{18351828-E218-4C09-BF1F-F9B9E10E5DE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kosmita", "Kosmita\Kosmita.csproj", "{18351828-E218-4C09-BF1F-F9B9E10E5DE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
