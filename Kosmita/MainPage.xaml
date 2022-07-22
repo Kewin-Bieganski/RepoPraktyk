@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="Kosmita.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Kosmita"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ControlTemplate x:Key="EnemyTemplate" TargetType="ContentControl">
+            <Grid>
+                <Ellipse Height="100" Stroke="Black" Width="100" Fill="#FFFA0000"/>
+            </Grid>
+        </ControlTemplate>
+    </Page.Resources>
+
+
+    <Grid x:Name="grid" Background="#FF28062B">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="startButton"  Content="Start!" Grid.Row="2" Background="#FF3951C9" VerticalAlignment="Center" HorizontalAlignment="Center" Click="startButton_Click"/>
+        <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="2" Height="50"/>
+        <Canvas x:Name="playArea" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" PointerMoved="playArea_PointerMoved" PointerExited="playArea_PointerExited">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,2" StartPoint="-0.8,0" SpreadMethod="Reflect" MappingMode="Absolute">
+                    <LinearGradientBrush.RelativeTransform>
+                        <CompositeTransform CenterY="0.5" CenterX="0.5" SkewY="3"/>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFA8F9B0" Offset="1"/>
+                    <GradientStop Color="#FF0ACB1B" Offset="0.413"/>
+                    <GradientStop Color="#FF4DDEBF" Offset="0.663"/>
+                    <GradientStop Color="#FF3C7041" Offset="0.224"/>
+                    <GradientStop Color="#FFE7A66C" Offset="0.779"/>
+                    <GradientStop Color="#FF89749D" Offset="0.862"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <StackPanel x:Name="human" Orientation="Vertical" PointerPressed="human_PointerPressed">
+                <Ellipse Height="10" Stroke="Black" Width="10" Fill="White"/>
+                <Rectangle Height="20" Stroke="Black" Width="10" Fill="White"/>
+            </StackPanel>
+            <Rectangle x:Name="target" Height="50" Stroke="Black" Width="50" Canvas.Left="1085" Canvas.Top="214" RenderTransformOrigin="0.5,0.5" Fill="Red" PointerEntered="target_PointerEntered">
+                <Rectangle.RenderTransform>
+                    <CompositeTransform Rotation="45"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <TextBlock x:Name="gameOverText" TextWrapping="Wrap" Text="END" Canvas.Left="545" Canvas.Top="225" FocusVisualPrimaryBrush="#FF0050FF" Foreground="Red" FontSize="100"/>
+        </Canvas>
+        <StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="2">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ContentControl Template="{StaticResource EnemyTemplate}" Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </StackPanel>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,500,8" TextWrapping="Wrap" Text="Kosmity" VerticalAlignment="Center" Foreground="#FF00D1FF" FontSize="72" FontStyle="Italic" FontWeight="Bold" FontFamily="Algerian"/>
+
+    </Grid>
+</Page>
