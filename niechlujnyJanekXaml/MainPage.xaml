@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="niechlujnyJanekXaml.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:niechlujnyJanekXaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="574.8" d:DesignWidth="832.5">
+    <Page.Resources>
+        <local:MenuMaker x:Name="menuMaker"/>
+        <x:String x:Key="Text">Hello World!</x:String>
+        <x:String x:Key="Czerwony">#FF0000</x:String>
+        <x:String x:Key="Niebieski">#0000FF</x:String>
+    </Page.Resources>
+        <StackPanel Margin="120,0" DataContext="{StaticResource ResourceKey=menuMaker}">
+        <TextBlock Style="{StaticResource HeaderTextBlockStyle}">Witamy u Niechlujnego Janka</TextBlock>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+            <StackPanel Margin="0,0,20,0">
+                <TextBlock Margin="0,0,0,10" Style="{StaticResource BodyTextBlockStyle}">Wielkość menu</TextBlock>
+                <TextBox Width="100" HorizontalAlignment="Left" Text="{Binding NumberOfItems, Mode=TwoWay}"/>
+            </StackPanel>
+            <Button x:Name="newMenu" VerticalAlignment="Bottom" Margin="0,0,20,0" Click="newMenu_Click">Wygeneruj nowe menu</Button>
+        </StackPanel>
+        <ListView ItemsSource="{Binding Menu}" Margin="0,0,20,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+<!--                  <TextBlock>
+                        <Run Text="{Binding Meat}" Foreground="Blue"/>
+                        <Run Text=", "/>
+                        <Run Text="{Binding Bread}" FontFamily="Rubik" FontSize="16pt"/>
+                        <Run Text=", "/>
+                        <Run Text="{Binding Condiment}" Foreground="Red"/>
+                    </TextBlock>
+-->
+                    <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                        <TextBlock Text="{Binding Meat}" Foreground="{StaticResource Niebieski}"/>
+                        <TextBlock Text="{Binding Bread}" FontFamily="Rubik" FontSize="16pt"/>
+                        <TextBlock Text="{Binding Condiment}" Foreground="{StaticResource Czerwony}"/>
+                    </StackPanel>
+                        <Ellipse Fill="DarkSlateBlue" Height="Auto" Width="10" Margin="10,0"/>
+                        <Button Content="Info" FontFamily="Segoe Script"/>
+                        <TextBlock Text="{StaticResource Text}" VerticalAlignment="Center" Margin="20,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBlock Style="{StaticResource CaptionTextBlockStyle}">
+            <Run Text="Data generacji menu: "/>
+            <Run Text="{Binding GeneratedDate}"/>
+        </TextBlock>
+    </StackPanel>
+
+</Page>
