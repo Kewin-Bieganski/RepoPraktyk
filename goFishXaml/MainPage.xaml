@@ -6,8 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Background="#FFD69300">
-
-    <Grid Background="#FFF7C860" Margin="120,0,60,60">
+    <Page.Resources>
+        <local:Game x:Name="game"/>
+    </Page.Resources>
+    <Grid Background="#FFF7C860" Margin="120,0,60,60" DataContext="{StaticResource game}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="40"/>
@@ -26,16 +28,16 @@
         <StackPanel Orientation="Vertical" Grid.Row="1">
             <TextBlock Text="Imię" Style="{StaticResource SubheaderTextBlockStyle}" Foreground="Black"/>
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="tB_name" FontSize="24" MinWidth="300" Width="500" Foreground="Black"/>
-                <Button x:Name="b_start" Margin="20,0" Content="Rozpocznij grę!" Click="b_start_Click" Foreground="Black"/>
+                <TextBox x:Name="tB_name" FontSize="24" MinWidth="300" Width="500" Foreground="Black" Text="{Binding PlayerName, Mode=TwoWay}" IsEnabled="{Binding GameNotStarted}"/>
+                <Button x:Name="b_start" Margin="20,0" Content="Rozpocznij grę!" Click="b_start_Click" Foreground="Black" IsEnabled="{Binding GameNotStarted}"/>
             </StackPanel>
         </StackPanel>
         <TextBlock Text="Postępy gry" Style="{StaticResource SubheaderTextBlockStyle}" Grid.Row="2" Margin="0,20" Foreground="Black"/>
-        <ScrollViewer x:Name="sV_progress" FontSize="24" Background="White" Foreground="Black" Grid.Row="3"  VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" HorizontalScrollMode="Disabled" IsHorizontalScrollChainingEnabled="False"/>
+        <ScrollViewer x:Name="sV_progress" FontSize="24" Background="White" Foreground="Black" Grid.Row="3"  VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" HorizontalScrollMode="Disabled" IsHorizontalScrollChainingEnabled="False" Content="{Binding GameProgress}"/>
         <TextBlock Text="Grupy" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,20,0,20" Grid.Row="4" Foreground="Black"/>
-        <ScrollViewer x:Name="sV_books" FontSize="24" Background="White" Foreground="Black" Grid.Row="5" Grid.RowSpan="2" Height="Auto" MinHeight="150"/>
+        <ScrollViewer x:Name="sV_books" FontSize="24" Background="White" Foreground="Black" Grid.Row="5" Grid.RowSpan="2" Height="Auto" MinHeight="150" Content="{Binding Books}"/>
         <TextBlock Text="Ręka"  Style="{StaticResource SubheaderTextBlockStyle}" Grid.Row="0" Grid.Column="2" Foreground="Black"/>
-        <ListBox x:Name="lB_hand" Background="White" FontSize="24" Margin="0,0,0,20" Grid.Row="1" Grid.RowSpan="5" Grid.Column="2" Height="Auto" Foreground="Black" DoubleTapped="b_ask_Click"/>
-        <Button x:Name="b_ask" Content="Zażądaj karty" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Grid.Column="2" Click="b_ask_Click" Foreground="Black"/>
+        <ListBox x:Name="lB_hand" Background="White" FontSize="24" Margin="0,0,0,20" Grid.Row="1" Grid.RowSpan="5" Grid.Column="2" Height="Auto" Foreground="Black" DoubleTapped="b_ask_Click" ItemsSource="{Binding Hand}" IsEnabled="{Binding GameInProgress}"/>
+        <Button x:Name="b_ask" Content="Zażądaj karty" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Grid.Column="2" Click="b_ask_Click" Foreground="Black" IsEnabled="{Binding GameInProgress}"/>
     </Grid>
 </Page>

@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace goFish
+namespace goFishXaml
 {
     internal class Deck
     {
         private List<Card> cards;
         private Random random = new Random();
+        public int Count { get { return cards.Count; } }
 
         public Deck()
         {
@@ -23,8 +21,6 @@ namespace goFish
         {
             cards = new List<Card>(initialCards);
         }
-
-        public int Count { get { return cards.Count; } }
         
         public void Add(Card cardToAdd)
         {
