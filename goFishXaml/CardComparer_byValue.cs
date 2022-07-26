@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace goFish
+namespace goFishXaml
 {
     internal class CardComparer_byValue : IComparer<Card>
     {
