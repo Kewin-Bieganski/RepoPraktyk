@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="textEditorXaml.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:textEditorXaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style x:Key="CircleAppBarButton" TargetType="AppBarButton">
+            <Setter Property="Label" Value="Text"/>
+            <Setter Property="Icon" Value="Accept"/>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="36"/>
+        </Style>
+    </Page.Resources>
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" Padding="10,0,10,0" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <AppBarButton x:Name="b_open" Click="b_open_Click" Style="{StaticResource CircleAppBarButton}" Icon="OpenFile" Label="Otwórz"/>
+                <AppBarButton x:Name="b_save" IsEnabled="False" Click="b_save_Click" Style="{StaticResource CircleAppBarButton}" Icon="Save" Label="Zapisz"/>
+                <AppBarButton x:Name="b_exit" Click="b_exit_Click" Style="{StaticResource CircleAppBarButton}" Icon="Clear" Label="Wyjdź"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="120,60,120,60">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tB_filename" Margin="10" Style="{StaticResource TitleTextBlockStyle}">Brak tytułu</TextBlock>
+        <Border Margin="10" Grid.Row="1">
+            <TextBox x:Name="tBox_text" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible" TextChanged="text_TextChanged"/>
+        </Border>
+    </Grid>
+</Page>
