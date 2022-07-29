@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.Serialization;
+using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Streams;
 
@@ -22,7 +23,7 @@ namespace serializeGuyXamlWithGui
         public string Path { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public async void ReadGuyAsync()
+        public async Task ReadGuyAsync()
         {
             if (String.IsNullOrEmpty(Path)) return;
             latestGuyFile = await StorageFile.GetFileFromPathAsync(Path);
@@ -36,7 +37,7 @@ namespace serializeGuyXamlWithGui
             }
         }
 
-        public async void WriteGuyAsync(Guy guyToWrite)
+        public async Task WriteGuyAsync(Guy guyToWrite)
         {
             IStorageFolder guysFolder = await KnownFolders.DocumentsLibrary.CreateFolderAsync("Faceci", CreationCollisionOption.OpenIfExists);
             latestGuyFile = await guysFolder.CreateFileAsync(guyToWrite.Name + ".xml", CreationCollisionOption.ReplaceExisting);
