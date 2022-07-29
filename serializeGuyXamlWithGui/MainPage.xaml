@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="serializeGuyXamlWithGui.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:serializeGuyXamlWithGui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <local:GuyManager x:Name="guyManager"/>
+    </Page.Resources>
+    <Grid DataContext="{StaticResource guyManager}" Margin="120,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="{Binding Joe}" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,0,0,20"/>
+            <Button x:Name="WriteJoe" Content="Zapisz Joego" Click="WriteJoe_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="{Binding Bob}" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,0,0,20"/>
+            <Button x:Name="WriteBob" Content="Zapisz Boba" Click="WriteBob_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="{Binding Ed}" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,0,0,20"/>
+            <Button x:Name="WriteEd" Content="Zapisz Eda" Click="WriteEd_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,20,0">
+            <TextBlock>Nazwa ostatniego zapisanego pliku</TextBlock>
+            <TextBox Text="{Binding Path, Mode=TwoWay}" Margin="0,0,0,20"/>
+            <TextBlock>Data utworzenia</TextBlock>
+            <TextBlock Text="{Binding LatestGuyFile.DateCreated.LocalDateTime}" Margin="0,0,0,20" Style="{StaticResource SubheaderTextBlockStyle}"/>
+            <TextBlock>Typ zawartości</TextBlock>
+            <TextBlock Text="{Binding LatestGuyFile.ContentType}" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Button x:Name="ReadNewGuy" Content="Wczytaj obiekt Guy" Click="ReadNewGuy_Click" Margin="0,10,0,0"/>
+            <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,0,0,20">
+                <Run>Nowy facet: </Run>
+                <Run Text="{Binding NewGuy}"/>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
