@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="excuseManagerXaml.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:excuseManagerXaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style x:Key="CircleButton" TargetType="Button">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="36"/>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+        <local:ExcuseManager x:Name="excuseManager"/>
+    </Page.Resources>
+    <Page.BottomAppBar>
+        <AppBar x:Name="appBar">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="40">
+                <StackPanel>
+                    <Button x:Name="b_newExcuse" Style="{StaticResource CircleButton}" HorizontalAlignment="Center" Content="&#x26F1;" Click="b_newExcuse_Click"/>
+                    <TextBlock HorizontalAlignment="Center">Nowa wymówka</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Button x:Name="b_folder" Style="{StaticResource CircleButton}" HorizontalAlignment="Center" Content="&#x1F4C1;" Click="b_folder_Click"/>
+                    <TextBlock HorizontalAlignment="Center">Folder</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Button x:Name="b_randomExcuse" Style="{StaticResource CircleButton}" HorizontalAlignment="Center" Content="&#x2047;" Click="b_randomExcuse_Click"/>
+                    <TextBlock HorizontalAlignment="Center">Losowa wymówka</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Button x:Name="b_open" Style="{StaticResource CircleButton}" HorizontalAlignment="Center" Content="&#128451;" Click="b_open_Click"/>
+                    <TextBlock HorizontalAlignment="Center">Otwórz</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Button x:Name="b_save" Style="{StaticResource CircleButton}" HorizontalAlignment="Center" Content="&#128190;" Click="b_save_Click"/>
+                    <TextBlock HorizontalAlignment="Center">Zapisz</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Button x:Name="b_saveAs" Style="{StaticResource CircleButton}" HorizontalAlignment="Center" Content="&#128428;" Click="b_saveAs_Click"/>
+                    <TextBlock HorizontalAlignment="Center">Zapisz jako...</TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+    <StackPanel Margin="120,60" DataContext="{StaticResource ResourceKey=excuseManager}">
+        <TextBlock Style="{StaticResource ResourceKey=SubheaderTextBlockStyle}" Text="Wymówka" Margin="0,0,0,10"/>
+        <TextBox Text="{Binding CurrentExcuse.Description, Mode=TwoWay}" Margin="0,0,0,20"/>
+        <TextBlock Style="{StaticResource ResourceKey=SubheaderTextBlockStyle}" Text="Wyniki" Margin="0,0,0,10"/>
+        <TextBox Text="{Binding CurrentExcuse.Results, Mode=TwoWay}" Margin="0,0,0,20"/>
+        <TextBlock Style="{StaticResource ResourceKey=SubheaderTextBlockStyle}" Text="Ostatnio użyte" Margin="0,0,0,10"/>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+            <TextBox Text="{Binding CurrentExcuse.LastUsed, Mode=TwoWay}" MinWidth="300" Margin="0,0,20,0"/>
+            <Button Content="Ustaw na aktualny dzień i godzinę" Click="b_setToCurrentTime_Click" Margin="20,0,0,0"/>
+            <TextBlock Foreground="Red" Text="{Binding CurrentExcuse.DateWarning}" Style="{StaticResource ResourceKey=SubheaderTextBlockStyle}"/>
+        </StackPanel>
+        <TextBlock Style="{StaticResource ResourceKey=SubheaderTextBlockStyle}" Text="Data pliku" Margin="0,0,0,10"/>
+        <TextBlock Text="{Binding FileDate}" Style="{StaticResource ResourceKey=NavigationViewItemHeaderTextStyle}"/>
+    </StackPanel>
+</Page>
